@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hybrid Machine Works — Precision machining and fabrication in Lake City, Florida. Prototype work, short-run production, CNC milling, turning, welding, and finishing.">
+  <title>Hybrid Machine Works — Precision Machining & Fabrication | Lake City, FL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:     #C9A84C;
+      --gold-h:   #dbbf6e;
+      --bg1:      #242424;
+      --bg2:      #202020;
+      --bg3:      #1a1a1a;
+      --card:     #2a2a2a;
+      --border:   #333;
+      --text:     #ffffff;
+      --muted:    #999;
+      --dim:      #666;
+      --radius:   6px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg3);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    /* ── UTILS ── */
+    .inner { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+    .section-eyebrow {
+      font-size: 10px; font-weight: 700; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--gold);
+      text-align: center; margin-bottom: 12px;
+    }
+    .section-heading {
+      font-size: 26px; font-weight: 800; text-align: center;
+      color: var(--text); margin-bottom: 40px; letter-spacing: -0.3px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(26,26,26,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-size: 13px; font-weight: 800; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--text);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a {
+      font-size: 12px; font-weight: 600; color: var(--muted);
+      text-decoration: none; letter-spacing: 0.3px;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--gold); color: #1a1a1a !important;
+      padding: 8px 18px; border-radius: 4px; font-weight: 700 !important;
+    }
+    .nav-cta:hover { background: var(--gold-h) !important; }
+
+    /* ── HERO ── */
+    #hero {
+      background: var(--bg1);
+      padding: 72px 24px 68px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    #hero img {
+      width: 160px; height: auto;
+      margin-bottom: 28px;
+      filter: brightness(0) invert(1);
+    }
+    #hero h1 {
+      font-size: 36px; font-weight: 800; line-height: 1.2;
+      letter-spacing: -0.5px; margin-bottom: 16px;
+    }
+    #hero h1 span { color: var(--gold); }
+    #hero p {
+      font-size: 16px; color: var(--muted);
+      max-width: 500px; margin: 0 auto 32px; line-height: 1.7;
+    }
+    .hero-tags {
+      display: flex; gap: 10px; justify-content: center;
+      flex-wrap: wrap; margin-top: 24px;
+    }
+    .hero-tag {
+      font-size: 11px; font-weight: 600; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--dim);
+      border: 1px solid var(--border); border-radius: 20px;
+      padding: 5px 14px;
+    }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-block; font-weight: 700; font-size: 14px;
+      padding: 14px 36px; border-radius: 5px; border: none;
+      cursor: pointer; text-decoration: none; letter-spacing: 0.3px;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .btn:active { transform: scale(0.98); }
+    .btn-gold { background: var(--gold); color: #1a1a1a; }
+    .btn-gold:hover { background: var(--gold-h); }
+    .btn-outline {
+      background: transparent; color: var(--gold);
+      border: 1px solid var(--gold);
+    }
+    .btn-outline:hover { background: var(--gold); color: #1a1a1a; }
+
+    /* ── ABOUT ── */
+    #about {
+      background: var(--bg2);
+      padding: 64px 24px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    #about p {
+      font-size: 16px; color: #bbb; max-width: 600px;
+      margin: 0 auto; line-height: 1.85;
+    }
+
+    /* ── CAPABILITIES ── */
+    #capabilities {
+      background: var(--bg1);
+      padding: 72px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .cap-col {
+      background: var(--card);
+      padding: 28px 24px;
+    }
+    .cap-col h3 {
+      font-size: 10px; font-weight: 700; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 16px; padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .cap-col ul { list-style: none; }
+    .cap-col ul li {
+      font-size: 13px; color: #ccc;
+      padding: 5px 0; border-bottom: 1px solid #2e2e2e;
+    }
+    .cap-col ul li:last-child { border-bottom: none; }
+    .cap-col ul li::before { content: "— "; color: var(--dim); }
+
+    /* ── EQUIPMENT ── */
+    #equipment {
+      background: var(--bg2);
+      padding: 72px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .eq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .eq-item {
+      background: var(--card);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 16px 20px;
+      transition: border-color 0.2s;
+    }
+    .eq-item:hover { border-color: var(--gold-h); }
+    .eq-name {
+      font-size: 14px; font-weight: 700; color: var(--text);
+      margin-bottom: 4px;
+    }
+    .eq-desc { font-size: 12px; color: var(--dim); line-height: 1.5; }
+
+    /* ── WHY US ── */
+    #why {
+      background: var(--bg1);
+      padding: 72px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .why-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .why-item:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+    .why-icon { font-size: 22px; margin-bottom: 10px; }
+    .why-item h3 {
+      font-size: 14px; font-weight: 700;
+      color: var(--text); margin-bottom: 8px;
+    }
+    .why-item p { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+    /* ── CTA BAND ── */
+    #cta {
+      background: var(--bg2);
+      padding: 72px 24px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    #cta h2 {
+      font-size: 28px; font-weight: 800;
+      margin-bottom: 12px; letter-spacing: -0.3px;
+    }
+    #cta p {
+      font-size: 15px; color: var(--muted);
+      max-width: 460px; margin: 0 auto 32px; line-height: 1.7;
+    }
+    .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .cta-email {
+      margin-top: 20px; font-size: 13px; color: var(--dim);
+    }
+    .cta-email a { color: var(--gold); text-decoration: none; }
+    .cta-email a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #141414;
+      padding: 32px 24px;
+      text-align: center;
+      border-top: 1px solid #222;
+    }
+    .footer-name {
+      font-size: 13px; font-weight: 800; letter-spacing: 1.5px;
+      text-transform: uppercase; color: #fff; margin-bottom: 8px;
+    }
+    .footer-sub {
+      font-size: 11px; color: #444; margin-bottom: 4px; line-height: 1.7;
+    }
+    .footer-copy { font-size: 10px; color: #2e2e2e; margin-top: 12px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 700px) {
+      #hero h1 { font-size: 26px; }
+      .cap-grid { grid-template-columns: 1fr; }
+      .eq-grid  { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .nav-links a:not(.nav-cta) { display: none; }
+    }
+    @media (max-width: 420px) {
+      .why-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#hero" class="nav-logo">Hybrid Machine Works</a>
+    <div class="nav-links">
+      <a href="#capabilities">Capabilities</a>
+      <a href="#equipment">Equipment</a>
+      <a href="#why">Why Us</a>
+      <a href="#"
+         data-tally-open="kdAZRe"
+         data-tally-layout="modal"
+         data-tally-width="460"
+         class="nav-cta">Request a Quote</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <!-- Replace src with your actual white logo path e.g. /assets/logo-white.png -->
+    <img src="/assets/logo-white.png" alt="Hybrid Machine Works Logo">
+    <h1>Precision Machining & Fabrication<br><span>Lake City, Florida</span></h1>
+    <p>Prototype work, short-run production, and precision components — delivered with the responsiveness a large shop can't offer.</p>
+    <button class="btn btn-gold"
+      data-tally-open="kdAZRe"
+      data-tally-layout="modal"
+      data-tally-width="460"
+      data-tally-emoji-text="👋"
+      data-tally-emoji-animation="wave"
+      data-tally-auto-close="2000">
+      → Request a Quote
+    </button>
+    <div class="hero-tags">
+      <span class="hero-tag">CNC Milling</span>
+      <span class="hero-tag">Turning</span>
+      <span class="hero-tag">Welding</span>
+      <span class="hero-tag">Finishing</span>
+      <span class="hero-tag">Prototypes</span>
+      <span class="hero-tag">Short Runs</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="inner">
+      <div class="section-eyebrow">Who We Are</div>
+      <p>Hybrid Machine Works is a precision machining and fabrication shop serving engineers, product developers, and manufacturers who need parts done right and done fast. We specialize in prototypes, short production runs, and custom components — where turnaround and communication matter as much as quality. You talk to the person making your parts.</p>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES -->
+  <section id="capabilities">
+    <div class="inner">
+      <div class="section-eyebrow">What We Do</div>
+      <div class="section-heading">Capabilities</div>
+      <div class="cap-grid">
+        <div class="cap-col">
+          <h3>Machining</h3>
+          <ul>
+            <li>3, 4 &amp; 5 Axis CNC Milling</li>
+            <li>2 Axis CNC Turning</li>
+            <li>Surface Grinding</li>
+          </ul>
+        </div>
+        <div class="cap-col">
+          <h3>Finishing</h3>
+          <ul>
+            <li>Tumbling &amp; Media Blasting</li>
+            <li>Black Oxide</li>
+            <li>Heat Treating</li>
+            <li>Laser Engraving / Marking</li>
+            <li>Silkscreen / Inking</li>
+          </ul>
+        </div>
+        <div class="cap-col">
+          <h3>Welding &amp; Assembly</h3>
+          <ul>
+            <li>MIG (GMAW)</li>
+            <li>TIG (GTAW)</li>
+            <li>Stick (SMAW)</li>
+            <li>Flux Core (FCAW)</li>
+            <li>Thin &amp; Thick Material</li>
+            <li>Weld Grinding</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPMENT -->
+  <section id="equipment">
+    <div class="inner">
+      <div class="section-eyebrow">Our Shop</div>
+      <div class="section-heading">Equipment</div>
+      <div class="eq-grid">
+        <div class="eq-item">
+          <div class="eq-name">Tormach 1100MX</div>
+          <div class="eq-desc">3 &amp; 4 Axis CNC Milling · ATC · 18" × 11" × 16" travel</div>
+        </div>
+        <div class="eq-item">
+          <div class="eq-name">PocketNC V2-10</div>
+          <div class="eq-desc">5 Axis CNC Milling</div>
+        </div>
+        <div class="eq-item">
+          <div class="eq-name">Tormach 8L CNC Lathe</div>
+          <div class="eq-desc">2 Axis Turning · 1" through bore · flood coolant</div>
+        </div>
+        <div class="eq-item">
+          <div class="eq-name">Precision Mathews PM-1236</div>
+          <div class="eq-desc">Manual Lathe · DRO · 12" × 36"</div>
+        </div>
+        <div class="eq-item">
+          <div class="eq-name">Tormach PSG 612</div>
+          <div class="eq-desc">Surface Grinder · 2-axis automatic · 6" × 12" table</div>
+        </div>
+        <div class="eq-item">
+          <div class="eq-name">AXYZ 5010 ATC</div>
+          <div class="eq-desc">CNC Router · Automatic Tool Changer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="why">
+    <div class="inner">
+      <div class="section-eyebrow">Why Work With Us</div>
+      <div class="section-heading">The Hybrid Difference</div>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-icon">⚡</div>
+          <h3>Fast</h3>
+          <p>No production backlog slowing down your prototype or short run.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">🎯</div>
+          <h3>Direct</h3>
+          <p>You talk to the person making your parts — no middlemen, no delays.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">🔧</div>
+          <h3>Flexible</h3>
+          <p>One part or a short run — we're set up for both without minimum order requirements.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">✅</div>
+          <h3>Credible</h3>
+          <p>Qualified Xometry supplier. Quality and on-time delivery are non-negotiable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <div class="inner">
+      <div class="section-eyebrow">Get Started</div>
+      <h2>Ready to Get a Quote?</h2>
+      <p>Send us your drawings, files, or a description of what you need. We'll review your project and respond promptly.</p>
+      <div class="cta-buttons">
+        <button class="btn btn-gold"
+          data-tally-open="kdAZRe"
+          data-tally-layout="modal"
+          data-tally-width="460"
+          data-tally-emoji-text="👋"
+          data-tally-emoji-animation="wave"
+          data-tally-auto-close="2000">
+          → Submit an RFQ
+        </button>
+      </div>
+      <div class="cta-email">Or email us directly at <a href="mailto:rfq@hybridmachineworks.com">rfq@hybridmachineworks.com</a></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-name">Hybrid Machine Works</div>
+    <div class="footer-sub">Lake City, Florida</div>
+    <div class="footer-sub">Precision Machining · Fabrication · Prototypes · Short-Run Production</div>
+    <div class="footer-sub"><a href="mailto:rfq@hybridmachineworks.com" style="color:#444;text-decoration:none;">rfq@hybridmachineworks.com</a></div>
+    <div class="footer-copy">© 2025 Hybrid Machine Works. All rights reserved.</div>
+  </footer>
+
+  <!-- TALLY -->
+  <script async src="https://tally.so/widgets/embed.js"></script>
+
+</body>
+</html>
