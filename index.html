@@ -14,9 +14,42 @@
     html, body {
       height: 100%;
       background: #000;
+      color: #fff;
+      font-family: sans-serif;
     }
 
     body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    header, footer {
+      background: #111;
+      padding: 14px 32px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    footer {
+      margin-top: auto;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    main {
+      flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -29,6 +62,24 @@
   </style>
 </head>
 <body>
-  <img src="images/logo-white.png" alt="Hybrid Machine Works">
+  <header>
+    <nav>
+      <a href="/">Home</a>
+    </nav>
+    <nav>
+      <a href="/equipment/">Equipment for Sale</a>
+    </nav>
+  </header>
+
+  <main>
+    <img src="images/logo-white.png" alt="Hybrid Machine Works">
+  </main>
+
+  <footer>
+    <nav>
+      <a href="/">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="/equipment/">Equipment for Sale</a>
+    </nav>
+  </footer>
 </body>
 </html>
