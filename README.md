@@ -37,7 +37,7 @@ In `index.html`:
 ```
 index.html                        ← main grid / landing page
 style.css                         ← shared styles for all pages
-<slug>.html                       ← one file per listing
+equipment/<slug>.html             ← one file per listing
 images/
   sold.png                        ← shared sold overlay image
   <slug>/                         ← photos for each listing
