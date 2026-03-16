@@ -68,7 +68,31 @@ a {
   color: #666;
   font-size: 0.97rem;
   max-width: 580px;
-  margin: 0 auto;
+  margin: 0 auto 16px;
+}
+
+.location {
+  font-size: 1rem;
+  color: #444;
+}
+
+.location strong {
+  font-size: 1.05rem;
+}
+
+.location a {
+  color: #C9A84C;
+  text-decoration: underline;
+}
+
+.location a:hover {
+  color: #a8893e;
+}
+
+.new-tab-hint {
+  font-size: 0.78rem;
+  color: #999;
+  font-style: italic;
 }
 
 /* ── Equipment Grid ── */
