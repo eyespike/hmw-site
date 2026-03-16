@@ -3,83 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hybrid Machine Works</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
-      background: #000;
-      color: #fff;
-      font-family: sans-serif;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-    }
-
-    header, footer {
-      background: #111;
-      padding: 14px 32px;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-
-    footer {
-      margin-top: auto;
-      justify-content: center;
-      font-size: 0.85rem;
-      color: #888;
-    }
-
-    nav a {
-      color: #ccc;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
-
-    nav a:hover {
-      color: #fff;
-    }
-
-    main {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    img {
-      max-width: 400px;
-      width: 80%;
-    }
-  </style>
+  <meta name="description" content="Hybrid Machine Works — Shop consolidation sale. CNC mills, lathes, fabrication equipment. Lake City, FL. Pickup only.">
+  <title>Equipment for Sale — Hybrid Machine Works</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="/">Home</a>
-    </nav>
-    <nav>
-      <a href="/equipment/">Equipment for Sale</a>
-    </nav>
+
+  <header class="site-header">
+    <a href="/" class="logo"><img src="images/logo-white.png" alt="Hybrid Machine Works"></a>
   </header>
 
-  <main>
-    <img src="images/logo-white.png" alt="Hybrid Machine Works">
-  </main>
+  <div class="terms-bar">
+    <span>Pickup only — no shipping</span>
+    <span>All sales final</span>
+    <span>Cash or verified payment only</span>
+    <span>Contact info revealed after intake form on each listing</span>
+  </div>
 
-  <footer>
-    <nav>
-      <a href="/">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-      <a href="/equipment/">Equipment for Sale</a>
-    </nav>
+  <section class="page-intro">
+    <h1>Equipment for Sale</h1>
+    <p>We're consolidating and downsizing our shop. All items are in working condition. Serious inquiries only. Contact and pickup information is provided after completing a short intake form on each listing.</p>
+  </section>
+
+  <section class="equipment-section">
+    <div class="equipment-grid">
+
+      <!-- ═══════════════════════════════════════════
+           CARD TEMPLATE — duplicate to add a listing
+           Status options: status-available / status-pending / status-sold
+           For sold items: uncomment .sold-overlay block
+           ═══════════════════════════════════════════ -->
+
+      <!-- Eastwood 48" Electro-Brake -->
+      <div class="card">
+        <div class="card-image">
+          <span class="status-badge status-available">Available</span>
+          <!-- <img src="images/eastwood-48-electro-brake/main.jpg" alt="Eastwood 48 Electro-Brake"> -->
+          <div class="img-placeholder">Photo coming soon</div>
+          <!-- Sold overlay — uncomment when sold:
+          <div class="sold-overlay"><img src="images/sold.png" alt="Sold"></div>
+          -->
+        </div>
+        <div class="card-body">
+          <h3>Eastwood 48" Electro-Brake Sheet Metal Brake</h3>
+          <div class="card-price">$2,500</div>
+          <a href="eastwood-48-electro-brake.html" class="card-link">View Listing</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    &copy; 2025 Hybrid Machine Works &mdash; Lake City, FL
   </footer>
+
 </body>
 </html>
