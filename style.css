@@ -178,6 +178,20 @@ a {
 .status-pending   { background: #f59e0b; color: #fff; }
 .status-sold      { background: #6b7280; color: #fff; }
 
+.ship-badge {
+  position: absolute;
+  top: 36px;
+  right: 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: #2563eb;
+  color: #fff;
+}
+
 .card-body {
   padding: 16px;
   flex: 1;

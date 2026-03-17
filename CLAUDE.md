@@ -155,9 +155,10 @@ Every listing page follows this exact structure. Copy `equipment/eastwood-48-ele
 
 1. Copy `equipment/eastwood-48-electro-brake.html` → `equipment/<slug>.html`
 2. Create `images/<slug>/` and add photos — `main.jpg` is the card thumbnail
-3. Add a card to the equipment grid in `index.html` (see comment template inside `.equipment-grid`)
-4. Set card status badge: `status-available`, `status-pending`, or `status-sold`
-5. For sold items: uncomment the `.sold-overlay` block and change the card link class to `link-sold`
+3. **List every image file in the folder** inside `.listing-photos` — run `ls images/<slug>/` and add an `<img>` tag for each one. Never guess filenames or use placeholder names like `img1.jpg`. Use the actual filenames as they exist on disk.
+4. Add a card to the equipment grid in `index.html` (see comment template inside `.equipment-grid`)
+5. Set card status badge: `status-available`, `status-pending`, or `status-sold`
+6. For sold items: uncomment the `.sold-overlay` block and change the card link class to `link-sold`
 
 ## CSS Classes Reference
 
@@ -175,6 +176,7 @@ Every listing page follows this exact structure. Copy `equipment/eastwood-48-ele
 | `.cal-box` | Gold-bordered calibration disclosure box |
 | `.condition-box` | White-bordered condition notes box |
 | `.condition-list` | Dash list inside `.condition-box` |
+| `.ship-badge` | Blue "Shippable" badge — on cards stacks below `.status-badge`; on listing pages use `style="position:static;display:inline-block"` |
 | `.pickup-callout` | Gold left-border callout linking to pickup page |
 | `.contact-gate` | Tally form contact section |
 | `.contact-direct` | Dark mailto contact section (no Tally) |
