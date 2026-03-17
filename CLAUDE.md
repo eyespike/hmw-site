@@ -26,6 +26,8 @@ images/sold.png                   ← shared sold overlay image
 
 ## Rules — follow these without exception
 
+- **Never use "OBO"** on any listing, in any copy, meta description, or anywhere on the site.
+
 - **Every page uses `style.css`** — never embed styles in a page, never create standalone pages with their own CSS.
 - **Every listing page lives in `equipment/`** — no exceptions.
 - **Stylesheet ref from listing pages:** `../style.css`
