@@ -27,6 +27,8 @@ images/sold.png                   ← shared sold overlay image
 ## Rules — follow these without exception
 
 - **Never use "OBO"** on any listing, in any copy, meta description, or anywhere on the site.
+- **All listing pages use the Tally contact form** (`contact-gate` with form ID `D4e1qR`) unless explicitly told otherwise. Never use `contact-direct` / mailto as the default. The Tally embed snippet is in the template below — copy it exactly.
+- **`equipment/eastwood-48-electro-brake.html` is the canonical template** for all new listings. When in doubt, match it.
 
 - **Every page uses `style.css`** — never embed styles in a page, never create standalone pages with their own CSS.
 - **Every listing page lives in `equipment/`** — no exceptions.
