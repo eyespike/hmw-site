@@ -218,6 +218,27 @@ a {
 .card-link.link-sold      { background: #9ca3af; pointer-events: none; }
 .card-link.link-pending   { background: #92400e; }
 
+/* ── Site Nav ── */
+.site-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.site-nav a {
+  color: #aaa;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color 0.15s;
+}
+
+.site-nav a:hover {
+  color: #C9A84C;
+}
+
 /* ── Footer ── */
 .site-footer {
   background: #1a1a1a;
@@ -233,6 +254,128 @@ a {
 
 .site-footer a:hover {
   color: #ccc;
+}
+
+.footer-nav {
+  margin-bottom: 8px;
+}
+
+.footer-nav a {
+  color: #777;
+  font-size: 0.8rem;
+  transition: color 0.15s;
+}
+
+.footer-nav a:hover {
+  color: #ccc;
+}
+
+/* ── Pickup Callout ── */
+.pickup-callout {
+  background: #f0ede8;
+  border-left: 3px solid #C9A84C;
+  border-radius: 4px;
+  padding: 14px 18px;
+  font-size: 0.88rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.pickup-callout a {
+  color: #C9A84C;
+  text-decoration: underline;
+}
+
+.pickup-callout a:hover {
+  color: #a8893e;
+}
+
+/* ── Home Pickup Banner ── */
+.pickup-banner {
+  max-width: 860px;
+  margin: 0 auto 0;
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 0.88rem;
+  color: #666;
+}
+
+.pickup-banner a {
+  color: #C9A84C;
+  text-decoration: underline;
+}
+
+.pickup-banner a:hover {
+  color: #a8893e;
+}
+
+/* ── Pickup & Loading Info Page ── */
+.info-page {
+  max-width: 720px;
+  margin: 48px auto 80px;
+  padding: 0 24px;
+}
+
+.info-page h1 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.info-hero {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #C9A84C;
+  margin-bottom: 28px;
+}
+
+.info-page > p,
+.info-page .body-copy {
+  color: #555;
+  font-size: 0.96rem;
+  margin-bottom: 20px;
+}
+
+.info-page ul {
+  color: #444;
+  font-size: 0.96rem;
+  margin: 0 0 28px 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.info-page ul li {
+  padding: 10px 14px 10px 18px;
+  border-bottom: 1px solid #e5e3df;
+  position: relative;
+}
+
+.info-page ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #C9A84C;
+  font-weight: 700;
+}
+
+.info-page ul li:last-child {
+  border-bottom: none;
+}
+
+.info-page ul li strong {
+  display: block;
+  color: #1a1a1a;
+  margin-bottom: 2px;
+}
+
+.info-disclaimer {
+  font-size: 0.8rem;
+  color: #999;
+  border-top: 1px solid #e5e3df;
+  padding-top: 20px;
+  margin-top: 32px;
 }
 
 /* ── Individual Listing Page ── */
