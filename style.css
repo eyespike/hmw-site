@@ -290,92 +290,67 @@ a {
   color: #a8893e;
 }
 
-/* ── Home Pickup Banner ── */
-.pickup-banner {
-  max-width: 860px;
-  margin: 0 auto 0;
-  padding: 12px 24px;
-  text-align: center;
-  font-size: 0.88rem;
-  color: #666;
+/* ── Home Pickup Note (inside .page-intro) ── */
+.pickup-note {
+  font-size: 0.82rem;
+  color: #888;
+  margin-top: 14px;
 }
 
-.pickup-banner a {
+.pickup-note a {
   color: #C9A84C;
   text-decoration: underline;
 }
 
-.pickup-banner a:hover {
+.pickup-note a:hover {
   color: #a8893e;
 }
 
-/* ── Pickup & Loading Info Page ── */
-.info-page {
-  max-width: 720px;
-  margin: 48px auto 80px;
-  padding: 0 24px;
-}
-
-.info-page h1 {
-  font-size: 1.9rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  margin-bottom: 10px;
-}
-
-.info-hero {
-  font-size: 1.15rem;
+/* ── Pickup & Loading Page — hero subhead ── */
+.pickup-hero {
+  font-size: 1rem;
   font-weight: 600;
-  color: #C9A84C;
-  margin-bottom: 28px;
+  color: #C9A84C !important;
 }
 
-.info-page > p,
-.info-page .body-copy {
-  color: #555;
-  font-size: 0.96rem;
-  margin-bottom: 20px;
-}
-
-.info-page ul {
-  color: #444;
-  font-size: 0.96rem;
-  margin: 0 0 28px 0;
-  padding-left: 0;
+/* ── Rules List (pickup page) ── */
+.rules-list {
   list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
 }
 
-.info-page ul li {
-  padding: 10px 14px 10px 18px;
-  border-bottom: 1px solid #e5e3df;
-  position: relative;
+.rules-list li {
+  padding: 14px 0;
+  border-bottom: 1px solid #edecea;
 }
 
-.info-page ul li::before {
-  content: '—';
-  position: absolute;
-  left: 0;
-  color: #C9A84C;
-  font-weight: 700;
-}
-
-.info-page ul li:last-child {
+.rules-list li:last-child {
   border-bottom: none;
 }
 
-.info-page ul li strong {
+.rule-title {
   display: block;
+  font-size: 0.92rem;
+  font-weight: 700;
   color: #1a1a1a;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 }
 
-.info-disclaimer {
+.rule-body {
+  display: block;
+  font-size: 0.92rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* ── Pickup Disclaimer ── */
+.pickup-disclaimer {
   font-size: 0.8rem;
   color: #999;
   border-top: 1px solid #e5e3df;
   padding-top: 20px;
-  margin-top: 32px;
+  margin-top: 8px;
 }
 
 /* ── Individual Listing Page ── */
