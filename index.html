@@ -39,14 +39,15 @@
 
       <!-- ═══════════════════════════════════════════
            CARD TEMPLATE — duplicate to add a listing
-           Status options: status-available / status-pending / status-sold
-           For sold items: uncomment .sold-overlay block
+           Do NOT add status-available badge — omit entirely for available items
+           For pending: <span class="status-badge status-pending">Pending</span>
+           For sold: <span class="status-badge status-sold">Sold</span> + uncomment .sold-overlay block + change card-link to link-sold
            ═══════════════════════════════════════════ -->
 
       <!-- Mitutoyo 389-514 — Near Mint -->
       <div class="card">
         <div class="card-image">
-          <span class="status-badge status-available">Available</span>
+
           <span class="ship-badge">Shippable</span>
           <img src="images/mitutoyo-389-mint/main.jpg" alt="Mitutoyo 389-514 Sheet Metal Micrometer — Near Mint">
         </div>
@@ -60,7 +61,7 @@
       <!-- Mitutoyo 389-514 — Good Condition -->
       <div class="card">
         <div class="card-image">
-          <span class="status-badge status-available">Available</span>
+
           <span class="ship-badge">Shippable</span>
           <img src="images/mitutoyo-389-good/main.jpg" alt="Mitutoyo 389-514 Sheet Metal Micrometer — Good Condition">
         </div>
@@ -74,7 +75,7 @@
       <!-- 18x12 Granite Surface Plate with Stand -->
       <div class="card">
         <div class="card-image">
-          <span class="status-badge status-available">Available</span>
+
           <img src="images/surface-plate-with-stand/main.jpg" alt="18x12 Granite Surface Plate with Stand">
         </div>
         <div class="card-body">
@@ -87,7 +88,7 @@
       <!-- Precision Matthews PM-30MV Benchtop Mill -->
       <div class="card">
         <div class="card-image">
-          <span class="status-badge status-available">Available</span>
+
           <img src="images/pm-30mv/main.jpg" alt="Precision Matthews PM-30MV Benchtop Mill">
         </div>
         <div class="card-body">
@@ -100,7 +101,7 @@
       <!-- Kemper Filter-Master Fume Extractor -->
       <div class="card">
         <div class="card-image">
-          <span class="status-badge status-available">Available</span>
+
           <img src="images/filter-master/main.jpg" alt="Kemper Filter-Master Mobile Fume Extractor">
         </div>
         <div class="card-body">
@@ -113,7 +114,7 @@
       <!-- Uline H-3846 Cantilever Rack -->
       <div class="card">
         <div class="card-image">
-          <span class="status-badge status-available">Available</span>
+
           <img src="images/cantilever-rack/main.jpg" alt="Uline H-3846 Cantilever Rack">
         </div>
         <div class="card-body">
@@ -126,7 +127,7 @@
       <!-- SWAG 40" Finger Press Brake -->
       <div class="card">
         <div class="card-image">
-          <span class="status-badge status-available">Available</span>
+
           <img src="images/swag-finger-brake/main.jpg" alt="SWAG 40&quot; Finger Press Brake Kit">
         </div>
         <div class="card-body">
@@ -139,7 +140,7 @@
       <!-- Redline 50-Ton Shop Press -->
       <div class="card">
         <div class="card-image">
-          <span class="status-badge status-available">Available</span>
+
           <img src="images/shop-press/main.jpg" alt="Redline 50-Ton Air/Hydraulic Shop Press">
         </div>
         <div class="card-body">
@@ -152,7 +153,7 @@
       <!-- Eastwood 48" Electro-Brake -->
       <div class="card">
         <div class="card-image">
-          <span class="status-badge status-available">Available</span>
+
           <img src="images/eastwood-48-electro-brake/main.jpg" alt="Eastwood 48 Electro-Brake">
           <!-- Sold overlay — uncomment when sold:
           <div class="sold-overlay"><img src="images/sold.png" alt="Sold"></div>

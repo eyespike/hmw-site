@@ -161,7 +161,7 @@ Every listing page follows this exact structure. Copy `equipment/eastwood-48-ele
 2. Create `images/<slug>/` and add photos — `main.jpg` is the card thumbnail
 3. **List every image file in the folder** inside `.listing-photos` — run `ls images/<slug>/` and add an `<img>` tag for each one. Never guess filenames or use placeholder names like `img1.jpg`. Use the actual filenames as they exist on disk.
 4. Add a card to the equipment grid in `index.html` (see comment template inside `.equipment-grid`)
-5. Set card status badge: `status-available`, `status-pending`, or `status-sold`
+5. **Do not add a status badge for available items** — omit entirely. Only badge `status-pending` or `status-sold`. The sold overlay makes the sold state clear; an "Available" badge clutters the card and conflicts visually with the sold overlay.
 6. For sold items: uncomment the `.sold-overlay` block and change the card link class to `link-sold`
 
 ## CSS Classes Reference
