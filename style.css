@@ -633,6 +633,58 @@ body.lightbox-open {
   .contact-direct {
     padding: 20px 18px;
   }
+
+  .listing-media {
+    grid-template-columns: 1fr;
+  }
+
+  .video-thumb-link img {
+    aspect-ratio: 9 / 16;
+  }
+}
+
+/* ── Listing Media (video + photos side by side) ── */
+.listing-media {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 12px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.listing-media .listing-photos {
+  margin-bottom: 0;
+}
+
+.video-thumb-link {
+  display: block;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-thumb-link img {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  display: block;
+  opacity: 0.85;
+  transition: opacity 0.15s;
+}
+
+.video-thumb-link:hover img { opacity: 0.7; }
+
+.video-play-btn {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.7);
+  pointer-events: none;
 }
 
 /* ── Included List ── */
