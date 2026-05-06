@@ -5,7 +5,10 @@
       "Bash(ls:*)",
       "Bash(git status:*)",
       "Bash(git add:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(git -C /Users/briankb/Code/work/hmw-site log --oneline --all)",
+      "Bash(git -C /Users/briankb/Code/work/hmw-site show --name-only 60a3aff d68d03b ac56390)",
+      "Bash(sort -k5 -n)"
     ]
   }
 }

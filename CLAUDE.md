@@ -28,6 +28,9 @@ images/sold.png                   ← shared sold overlay image
 
 - **Never use "OBO"** on any listing, in any copy, meta description, or anywhere on the site.
 - **All listing pages use the Tally contact form** (`contact-gate` with form ID `D4e1qR`) unless explicitly told otherwise. Never use `contact-direct` / mailto as the default. The Tally embed snippet is in the template below — copy it exactly.
+- **Sold listing pages have no contact form** — remove the `contact-gate` (or `contact-direct`) block entirely when marking a listing sold. Sold items have nothing to contact about.
+- **Sold listing pages append `— <strong>SOLD</strong>` to the `<h1>`** and change `— For Sale —` to `— SOLD —` in the `<title>` tag.
+- **Sold status is indicated by `main.jpg` being replaced with the sold image** (`images/sold.png`, 273 KB). Check file size or git history to determine sold status — there are no sold flags in the HTML itself.
 - **`equipment/eastwood-48-electro-brake.html` is the canonical template** for all new listings. When in doubt, match it.
 
 - **Every page uses `style.css`** — never embed styles in a page, never create standalone pages with their own CSS.
@@ -162,7 +165,7 @@ Every listing page follows this exact structure. Copy `equipment/eastwood-48-ele
 3. **List every image file in the folder** inside `.listing-photos` — run `ls images/<slug>/` and add an `<img>` tag for each one. Never guess filenames or use placeholder names like `img1.jpg`. Use the actual filenames as they exist on disk.
 4. Add a card to the equipment grid in `index.html` (see comment template inside `.equipment-grid`)
 5. **Do not add a status badge for available items** — omit entirely. Only badge `status-pending` or `status-sold`. The sold overlay makes the sold state clear; an "Available" badge clutters the card and conflicts visually with the sold overlay.
-6. For sold items: uncomment the `.sold-overlay` block and change the card link class to `link-sold`
+6. For sold items: uncomment the `.sold-overlay` block and change the card link class to `link-sold`; on the listing page append `— <strong>SOLD</strong>` to the `<h1>`, change `— For Sale —` to `— SOLD —` in `<title>`, and remove the contact form entirely
 
 ## CSS Classes Reference
 
