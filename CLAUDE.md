@@ -31,7 +31,7 @@ images/sold.png                   ← shared sold overlay image
 - **Sold listing pages have no contact form** — remove the `contact-gate` (or `contact-direct`) block entirely when marking a listing sold. Sold items have nothing to contact about.
 - **Sold listing pages append `— <strong>SOLD</strong>` to the `<h1>`** and change `— For Sale —` to `— SOLD —` in the `<title>` tag.
 - **Sold status is indicated by `main.jpg` being replaced with the sold image** (`images/sold.png`, 273 KB). Check file size or git history to determine sold status — there are no sold flags in the HTML itself.
-- **`equipment/eastwood-48-electro-brake.html` is the canonical template** for all new listings. When in doubt, match it.
+- **`equipment/pocket-nc-v2-10.html` is the canonical template** for all new listings. When in doubt, match it. (It's a For-Sale listing with the live Tally contact form and the standard pickup-only structure. Do not use a sold listing as a template — sold pages have the contact form removed.)
 
 - **Every page uses `style.css`** — never embed styles in a page, never create standalone pages with their own CSS.
 - **Every listing page lives in `equipment/`** — no exceptions.
@@ -48,7 +48,7 @@ images/sold.png                   ← shared sold overlay image
 
 ## Listing Page Template
 
-Every listing page follows this exact structure. Copy `equipment/eastwood-48-electro-brake.html` as the base.
+Every listing page follows this exact structure. Copy `equipment/pocket-nc-v2-10.html` as the base.
 
 ```html
 <!DOCTYPE html>
@@ -160,7 +160,7 @@ Every listing page follows this exact structure. Copy `equipment/eastwood-48-ele
 
 ## Adding a New Listing
 
-1. Copy `equipment/eastwood-48-electro-brake.html` → `equipment/<slug>.html`
+1. Copy `equipment/pocket-nc-v2-10.html` → `equipment/<slug>.html`
 2. Create `images/<slug>/` and add photos — `main.jpg` is the card thumbnail
 3. **List every image file in the folder** inside `.listing-photos` — run `ls images/<slug>/` and add an `<img>` tag for each one. Never guess filenames or use placeholder names like `img1.jpg`. Use the actual filenames as they exist on disk.
 4. Add a card to the equipment grid in `index.html` (see comment template inside `.equipment-grid`)

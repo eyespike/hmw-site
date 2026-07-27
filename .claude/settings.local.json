@@ -8,7 +8,13 @@
       "Bash(git push:*)",
       "Bash(git -C /Users/briankb/Code/work/hmw-site log --oneline --all)",
       "Bash(git -C /Users/briankb/Code/work/hmw-site show --name-only 60a3aff d68d03b ac56390)",
-      "Bash(sort -k5 -n)"
+      "Bash(sort -k5 -n)",
+      "Bash(pkill -f \"http.server 8099\")",
+      "Bash(git -C /Users/briankb/Code/work/hmw-site status --short)",
+      "Bash(sed -i '' 's/\\\\$24,500/$25,500/g' index.html equipment/axyz-5010-atc.html)",
+      "Bash(sed -i '' 's/\\\\$13,500/$10,500/g' index.html equipment/tormach-8l.html)",
+      "Bash(sed -i '' 's/\\\\$5,500/$5,000/g' index.html equipment/pocket-nc-v2-10.html)",
+      "Bash(grep -rn '\\\\$25,500\\\\|\\\\$10,500\\\\|\\\\$5,000\\\\|\\\\$24,500\\\\|\\\\$13,500\\\\|\\\\$5,500' --include='*.html' .)"
     ]
   }
 }
